@@ -1,0 +1,56 @@
+ #text-form, h3 {
+    color:rgb(26, 18, 18);
+    margin-left: 10px;
+
+}
+section {
+    background: #f1724b ;
+    color: rgb(237, 240, 243);
+    text-align: center;
+    font-size: 1,8em;
+    margin:auto;
+}
+th {
+    color: rgb(48, 40, 40);
+    font-size: 1,5em;
+}
+button {
+    color:rgb(18, 19, 17);
+    background:grey;
+    background: greenyellow;
+}
+
+h1 {
+    color:greenyellow;
+    text-align: center;
+}
+input {
+    border-width: 2px;
+    border-color: rgb(16, 15, 15);
+}
+#pojistka {
+    background: greenyellow;
+    width: 16%;
+}
+#edition {
+    background: grey;
+}
+
+#prihlasit {
+    text-align: right;
+}
+
+body {
+    background: #f1724b;
+    margin: 0 250px 0px 250px;
+}
+#floatingInput {
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+#title {
+    margin-top: 30px;
+}
+form ,h3 {
+    text-align: center;
+}

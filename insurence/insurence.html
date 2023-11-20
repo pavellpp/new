@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pojištění</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+            <section>
+		    <h1>Evidence pojištěnců</h1>
+                
+                <!-- tlacitka pro ulozeni a nacteni kolekce z/do localstorage prohlizece -->
+				<button onclick='saveData();'>Uložit do databáze</button>
+                <button onclick='loadData();'>Načíst z databáze</button>
+            </section>     
+                
+		   <h3>Přidat pojištěnce</h3>
+                
+		<form id="text-form">
+		<input type="text" name="jmeno" id="jmeno" placeholder="Vyplňte jméno a příjmení"></br>
+		<input type="text" name="adresa" id="adresa" placeholder="Vyplňte adresu"></br>
+		<input type="text" name ="mesto" id="mesto" placeholder="Vyplň město"></br>
+		<input type="text" name="vek" id="vek" placeholder="Vyplňte věk"></br>
+		<input type="text" name="kontakt" id="kontakt" placeholder="Vyplňte kontakt"></br>
+		<div class="form-group">
+			<select class="custom-select" id="pojistka" Druh pojištění>
+				<option>Vyber druh pojištění</option>
+				<option>Povinné a havarijní ručení</option>
+				<option>Pojištění majetku</option>
+				<option>Pojištění osob</option>
+			</select>
+		
+			</div>
+		</li>
+		
+		</form>
+                <!-- zmenil jsem submit input na button, ktery neodesila formular a vystrcil ho ven z formulare, vyvaroval jsem se prevent.default
+                pridal jsem onclick event listener, ktery ceka na kliknuti a po nem spusti funkci addInsurance();-->
+                <button onclick="addInsurance();"> Uložit řádek </button>
+				<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+				</p>
+
+		<table id="table" class="table table-bordered border-primary">
+		  
+			<th>Jméno a příjmení</th>
+			<th>Adresa</th>
+			<th>Město</th>
+			<th>Věk</th>
+			<th>Kontakt</th>
+			<th>Druh pojištění</th>
+			<th>Editovat / Smazat</th>
+                        <!-- Přidán sloupec Smazat kde bude klikátko na smazání radku -->
+                        
+                        <!-- Přidán tag tbody, do kterého budeme vkládat řádky podle id elementu -->
+                        <tbody id="tableBody">
+                            
+                        </tbody>
+
+		</table>
+                
+                <button onclick='sortInsurancesAsc();'>Seradit A-Z</button>
+            
+                
+		
+  
+                <script src="pojistenci.js"></script>
+				<script src="database.js"></script>
+		       <script src="obsluha.js"></script>
+			     <script src="login.js"></script>
+		    
+	</body>
+</html>
